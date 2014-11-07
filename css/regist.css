@@ -1,0 +1,25 @@
+*,body{margin:0;padding:0;color: #12c0d0;font-family: "微软雅黑";}
+header{height: 2em;width: 100%;background: #13c0d0;color: #FFF;}
+.form-content:{color: #12c0d0;} 
+fieldset{border: #13c0d0 1px solid;border-radius: 0.5em;text-align: center;margin: 0.5em;}
+input{border: #13c0d0 1px solid;border-radius: 3em;height: 2em;width:75%;text-align: center;}
+#checkcode{width: 35%;}
+#getcheckcode{width: 40%;height: 2em;background:#12c0d0;border-radius: 3em;color: #FFF;font-size: 10px;}
+input[type=checkbox]{height: 1em;border: 1px #12c0d0 solid;width: auto;background: #FFF;appearance: none;}
+#checkbox{}
+#submit{background:  #13c0d0;color: #FFF;}
+#account::-webkit-input-placeholder,#password::-webkit-input-placeholder,#checkcode::-webkit-input-placeholder{color:#a9e6eb; text-align: center;}
+table{margin:5em auto;font-size: 10px;text-align: left;}
+table td{padding-top:10px;}
+
+/*意见反馈*/
+.feedback-content: {
+	
+}
+#trangle{
+	height: 0;
+	width: 0;
+	border-color: transparent transparent  transparent  #12d0d0;
+	border-width: 100px 100px 100px 100px;
+	border-style: solid;
+}

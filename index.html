@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>亲子约定</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="apple-touch-fullscreen" content="YES" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+<link rel="stylesheet" type="text/css" href="css/qzcommand.css">
+</head>
+<body>
+	
+	<div class="pages">
+		 <div class="page navbar-through">
+	<header>
+            <nav  ><a id="qinzi" href="tab1.html" class="qinzi-head header-nav">亲子约定</a></nav>
+            <nav  ><a id="recorded" href="tab2.html" class="header-nav">成长记录</a></nav>
+    </header>	 	
+	<!-- 尾部提醒 -->
+	<footer>
+        <p>轻松一点就能愉快和孩子达成约定哦！</p>
+    </footer>
+		</div>
+	</div>
+	
+</body>
+<script src="js/lib/zepto.js"></script>
+<script src="js/api-latest.js"></script>
+<script src="js/BlendWebUI.js"></script> 
+<!-- <script src="js/app.js"></script> -->
+<!-- <script src="js/qinzi.js"></script> -->
+<script>
+document.addEventListener("blendready",function(){        
+        Blend.ui.layerInit("0",function(dom){
+            var tabs = new Blend.ui.LayerGroup({
+                id: "tabs",
+                layers: [{
+                    id: 'qinzi',
+                    url: 'tab1.html',
+                    "active":true, 
+                    'autoload': true,
+                    "pullToRefresh":true,
+                    "pullBgColor":"ff0000",
+                    "ptrFn":function(){
+                        console.log("refresh1 callback");
+                        setTimeout(function(){
+                            
+                            Blend.ui.layerStopRefresh();
+                        },800);
+                    }
+                }, {
+                    id: 'recorded',
+                    url: 'tab2.html',
+                       
+                    'autoload': true
+                } 
+                // {
+                //     id: 'group3',
+                //     url: 'samples/group3.html',
+                //     'autoload': true,
+                //     "pullToRefresh":true,
+                //     "pullText":"下拉刷新：）",
+                //     "loadingText":"更新中...",
+                //     "releaseText":"释放更新^_^",
+                //     "ptrFn":function(){
+                //         console.log("refresh3 callback");
+                //         setTimeout(function(){
+                            
+                //             Blend.ui.layerStopRefresh();
+                //         },500);
+                //     }
+                    
+                
+                // }
+                ],
+                onshow: function(event) {
+                    var id = event['detail'];
+                    $(".buttons-row a").removeClass('active');
+                    $("#" + id).addClass('active');
+                    // $("#navStyle").removeClass().addClass("ls"+ $("#" + id).index())
+                },
+                
+                left: 0,
+                top: 100
+            });
+            $("nav a").on("click",function(e) {
+                // alert("in");
+                e.preventDefault();
+                tabs.active(this.id);
+                alert(this.id);
+                return false;
+            });
+        });
+ });
+
+</script>
+</html>

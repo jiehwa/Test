@@ -1,0 +1,15 @@
+*,body{margin:0;padding:0;color: #12c0d0;font-family: "微软雅黑";}
+header{height: 2em;width: 100%;background: #13c0d0;color: #FFF;}
+ul{width: 100%;height:100%;}
+ul li{width: 20%;float: left;background: #DFE;height: 100%;list-style: none;}
+.form-content{color: #12c0d0;} 
+#feedback-text{height: 35em;width: 100%;background:#f1f1f1; }
+#feedback-pic{height: 5em;width: 100%;background: #eee;margin-bottom: 1em;}
+.addpic{height:100%;width:100%;background: url(../img/feedback.png) no-repeat;background-size: 100%;}
+input[type=text]{border: #13c0d0 1px solid;border-radius: 3em;height: 2em;width:75%;text-align: center;}
+#submit{background:  #13c0d0;color: #FFF;border-radius: 3em;height: 2em;background:  #13c0d0;width:20%;border: #13c0d0 1px solid;}
+#account::-webkit-input-placeholder,#password::-webkit-input-placeholder,#checkcode::-webkit-input-placeholder{color:#a9e6eb; text-align: center;}
+table{margin:5em auto;font-size: 10px;text-align: left;}
+table td{padding-top:10px;}
+
+/*意见反馈*/
